@@ -14,12 +14,13 @@ use App\Models\Attribute_value;
 
 class HomeController extends Controller
 {
+    /* Hi this is Test commit with new branch */
     public function index(){
         $blocks=Block::all();
         // dd($blocks);
         $sliders=Slider::all();
         $products = Product::where('status', 1)->simplePaginate(4);
-        // dd($products);
+        
         // $products->paginate(3);
         return view('web.home',compact('blocks','sliders','products'));
     }
